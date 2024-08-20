@@ -53,6 +53,11 @@ function App() {
                   </a>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link" href="#experience">
+                    Experience
+                  </a>
+                </li>
+                <li className="nav-item">
                   <a className="nav-link" aria-current="page" href="#project">
                     Projects
                   </a>
@@ -68,8 +73,8 @@ function App() {
         </nav>
         {/* Body */}
         {/* Introduction */}
-        <section className="introduction intro-bg">
-          <div className="container mt-3">
+        <section className="introduction darker-bg pt-xl-8" id="introduction">
+          <div className="container">
             {/*  */}
             <div className="row">
               {/* Greeting */}
@@ -82,7 +87,7 @@ function App() {
                   typesetting industry. Lorem Ipsum has been the.
                 </p>
                 {/* Music */}
-                <div className="music-player mb-3 d-flex">
+                <div className="music-player mb-4 d-flex">
                   <audio controls autoPlay loop></audio>
                   <marquee direction="left" className="align-self-center">
                     Jar of Love - WantingsMusic
@@ -112,7 +117,7 @@ function App() {
           </div>
         </section>
         {/* About me */}
-        <section className="about mt-5" id="about">
+        <section className="about py-xl-8" id="about">
           <div className="container">
             <h2 className="text-center">About Me</h2>
             <div className="row">
@@ -134,9 +139,9 @@ function App() {
           </div>
         </section>
         {/* Timeline */}
-        <section className="bsb-timeline-1 py-5 py-xl-8">
+        <section className="bsb-timeline-1 py-xl-8" id="experience">
           <div className="container">
-            <h2 className="text-center">Experiences</h2>
+            <h2 className="text-center pb-4">Experience</h2>
             <div className="row justify-content-center">
               <div className="col-10 col-md-8 col-xl-6">
                 <ul className="timeline">
@@ -217,9 +222,10 @@ function App() {
         </section>
         {/* end of Timeline */}
         {/* Projects */}
-        <section className="projects" id="project">
+        <section className="projects darker-bg py-xl-3" id="project">
           <div className="container">
-            <div className="album py-5 bg-light">
+            <h2 className="text-center pt-5">Check out my projects</h2>
+            <div className="album py-4">
               <div className="container">
                 <div className="row">
                   <div className="col-md-4">
