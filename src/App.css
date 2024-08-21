@@ -14,6 +14,29 @@
     border-radius: 30px;
     width: 70%;
 }
+/* Skill icons */
+.skillFrame {
+    width: 100px;
+    height: 100px;
+}
+.skillIcon {
+    width: 70px;
+}
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reactIcon:hover {
+  animation: slowRotate 10s linear infinite;
+}
+.skillIcon:hover {
+    width: 75px;
+}
 /* Timeline */
 .py-8 {
     padding-bottom:4.5rem!important;
