@@ -1,13 +1,14 @@
 import { useState } from "react";
 import avatar from "./assets/img/avatar.webp";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { FaFacebookF } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaHouse } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
-import { HiDotsCircleHorizontal } from "react-icons/hi";
+import { IoEllipsisHorizontal } from "react-icons/io5";
+import { FaCalendarAlt } from "react-icons/fa";
 import htmlIcon from "./assets/img/html.png";
 import cssIcon from "./assets/img/css.png";
 import jsIcon from "./assets/img/javascript.png";
@@ -90,11 +91,11 @@ function App() {
             {/*  */}
             <div className="row">
               {/* Greeting */}
-              <div className="col-8 col-sm my-3">
+              <div className="col-xl-6 col-md-7 col-sm-12 my-3">
                 <h1>Hi! I&apos;m</h1>
                 <h1>Khanh Phuc Thinh Nguyen</h1>
                 <h5>Frontend Developer</h5>
-                <p>Student at Swinburne University of Technology</p>
+                <p>Sophomore at Swinburne University of Technology</p>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the.
@@ -106,33 +107,36 @@ function App() {
                     Jar of Love - WantingsMusic
                   </marquee>
                 </div>
-                {/* Button */}
-                <div>
-                  <button type="button" className="btn btn-outline-secondary">
-                    Discover More
-                  </button>
-                </div>
               </div>
               {/* Avatar */}
-              <div className="col-4 col-sm">
+              <div className="col-xl-6 col-md-5 col-sm-12">
                 <div className="d-flex flex-column justify-content-center align-items-center">
                   <img className="avatar img-fluid" src={avatar} alt="Avatar" />
                   {/* Button */}
                   <div>
-                    <button type="button" className="btn btn-outline-secondary">
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary mb-3"
+                    >
                       Download CV
                     </button>
                   </div>
                 </div>
               </div>
               {/*  */}
+              {/* Button */}
+              {/* <div>
+                <button type="button" className="btn btn-outline-secondary mb-4">
+                  View Portfolio
+                </button>
+              </div> */}
             </div>
           </div>
         </section>
         {/* About me */}
         <section className="about py-xl-8" id="about">
           <div className="container">
-            <h2 className="text-center">About Me</h2>
+            <h2 className="text-center mt-3">About Me</h2>
             <div className="row">
               <div className="col">
                 <p>
@@ -149,12 +153,39 @@ function App() {
                 </p>
               </div>
             </div>
+            {/* Tags */}
+            <div className="d-flex justify-content-center align-items-center">
+              <button
+                type="button"
+                className="btn btn-sm btn-outline-secondary tag"
+              >
+                Internet of Things
+              </button>
+              <button
+                type="button"
+                className="btn btn-sm btn-outline-secondary tag"
+              >
+                Web Development
+              </button>
+              <button
+                type="button"
+                className="btn btn-sm btn-outline-secondary tag"
+              >
+                Cloud Computing
+              </button>
+              <button
+                type="button"
+                className="btn btn-sm btn-outline-secondary tag"
+              >
+                Database
+              </button>
+            </div>
           </div>
         </section>
         {/* About me */}
         <section className="skills">
           <div className="container">
-            <h2 className="text-center pt-1 pb-4">Skills</h2>
+            <h2 className="text-center pb-4 mt-3">Skills</h2>
             <div className="row">
               <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
                 <img className="skillIcon" src={htmlIcon} alt="HTML" />
@@ -190,7 +221,7 @@ function App() {
         {/* Timeline */}
         <section className="bsb-timeline-1 py-xl-8" id="experience">
           <div className="container">
-            <h2 className="text-center pt-3 pb-5">Work Experience</h2>
+            <h2 className="text-center pb-5 mt-3">Work Experience</h2>
             <div className="row justify-content-center">
               <div className="col-10 col-md-8 col-xl-6">
                 <ul className="timeline">
@@ -203,7 +234,7 @@ function App() {
                               Spring 2024 - Present
                             </h5>
                             <h3 className="card-title mb-3">
-                              Working as IT Lab Assistant
+                              IT Lab Assistant
                             </h3>
                             <p className="card-text m-0">
                               Recognizing there are still many gaps in my
@@ -225,9 +256,11 @@ function App() {
         </section>
         {/* end of Timeline */}
         {/* Projects */}
-        <section className="projects darker-bg py-xl-3" id="project">
+        <section className="projects darker-bg" id="project">
           <div className="container">
-            <h2 className="text-center pt-5">Check out my projects</h2>
+            <h2 className="text-center pt-5 pb-2 mt-3">
+              Check out my projects
+            </h2>
             <div className="album py-4">
               <div className="container">
                 <div className="row">
@@ -257,6 +290,11 @@ function App() {
                         height="225"
                       />
                       <div className="card-body">
+                        <p className="d-flex align-items-center text-secondary">
+                          <FaCalendarAlt />
+                          &nbsp;2023
+                        </p>
+                        <h5 className="card-title">Card title</h5>
                         <p className="card-text">
                           My first webpages using HTML, CSS and JavaScript.
                         </p>
@@ -291,6 +329,11 @@ function App() {
                         height="225"
                       />
                       <div className="card-body">
+                        <p className="d-flex align-items-center">
+                          <FaCalendarAlt />
+                          &nbsp;2023
+                        </p>
+                        <h5 className="card-title">Card title</h5>
                         <p className="card-text">
                           This is my first project using ReactJS, where me and
                           my team developed a simple Decentralized Trading
@@ -332,6 +375,11 @@ function App() {
                         height="225"
                       />
                       <div className="card-body">
+                        <p className="d-flex align-items-center">
+                          <FaCalendarAlt />
+                          &nbsp;2023
+                        </p>
+                        <h5 className="card-title">Card title</h5>
                         <p className="card-text">
                           This is a wider card with supporting text below as a
                           natural lead-in to additional content. This content is
@@ -402,7 +450,6 @@ function App() {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -418,20 +465,52 @@ function App() {
           <section className="p-2">
             <div className="container text-center text-md-start mt-5">
               <div className="row mt-3">
-                <div className="col-md-3 col-lg-3 col-xl-4 mx-auto mb-4">
-                  <h4 className="text-uppercase fw-bold">PancakesLmao</h4>
-                  <hr
-                    className="mb-4 mt-0 d-inline-block mx-auto"
-                    style={{
-                      width: "190px",
-                      backgroundColor: "#7c4dff",
-                      height: "2px",
-                    }}
-                  />
+                <div className="col-md-4 col-lg-4 col-xl-5 mx-auto mb-4">
+                  <div>
+                    <h4 className="text-uppercase fw-bold">PancakesLmao</h4>
+                    <hr
+                      className="mb-3 mt-0 d-inline-block mx-auto"
+                      style={{
+                        width: "190px",
+                        backgroundColor: "#7c4dff",
+                        height: "2px",
+                      }}
+                    />
+                    <u className="social-list d-flex justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
+                      <li>
+                        <a href="#!" className="">
+                          <FaFacebookF className="social-icon" />
+                        </a>
+                      </li>
+                      {/* <li>
+                        <a href="#!" className="">
+                          <FaDiscord className="social-icon" />
+                        </a>
+                      </li> */}
+                      <li>
+                        <a
+                          href="linkedin.com/in/khanh-phuc-thinh-nguyen-a216b928b"
+                          className=""
+                        >
+                          <FaLinkedinIn className="social-icon" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#!" className="">
+                          <TbBrandGithubFilled className="social-icon" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#!" className="">
+                          <IoEllipsisHorizontal className="social-icon" />
+                        </a>
+                      </li>
+                    </u>
+                  </div>
                 </div>
 
                 <div className="col-md-5 col-lg-5 col-xl-4 mx-auto mb-4">
-                  <h6 className="text-uppercase fw-bold">Social networks</h6>
+                  <h6 className="text-uppercase fw-bold">Other networks</h6>
                   <hr
                     className="mb-4 mt-0 d-inline-block mx-auto"
                     style={{
@@ -441,43 +520,15 @@ function App() {
                     }}
                   />
                   <p>
-                    <FaFacebook />
-                    &nbsp;
-                    <a href="#!" className="text-dark">
-                      Nguyễn Thịnh
-                    </a>
-                  </p>
-                  <p>
                     <FaDiscord />
                     &nbsp;
                     <a href="#!" className="text-dark">
                       pancakeslmao2902
                     </a>
                   </p>
-                  <p>
-                    <FaLinkedin />
-                    &nbsp;
-                    <a href="#!" className="text-dark">
-                      Khanh Phuc Thinh Nguyen
-                    </a>
-                  </p>
-                  <p>
-                    <FaGithub />
-                    &nbsp;
-                    <a href="#!" className="text-dark">
-                      PancakesLmao
-                    </a>
-                  </p>
-                  <p>
-                    <HiDotsCircleHorizontal />
-                    &nbsp;
-                    <a href="#!" className="text-dark">
-                      Others
-                    </a>
-                  </p>
                 </div>
 
-                <div className="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                   <h6 className="text-uppercase fw-bold">
                     Contact information
                   </h6>
