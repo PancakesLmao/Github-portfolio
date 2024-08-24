@@ -42,6 +42,29 @@
     border-radius: 40px !important;
     margin: 0 8px 0;
 }
+.project-tag {
+    border-radius: 50px !important;
+    margin: 0px 7px 20px 0px;
+}
+/* git repo */
+.git-repo li a {
+    margin: 0 5px 0 0;
+    height: 40px;
+    width: 40px;
+    display: block;
+    color: black;
+    border-radius: 50%;
+    position: relative;
+    background: rgb(178, 171, 171);
+}
+.git-repo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 /* Timeline */
 .py-8 {
     padding-bottom:4.5rem!important;
@@ -139,7 +162,10 @@
     color: #fff;
     border-radius: 50%;
     position: relative;
-    background: #0779e4;
+    background: rgb(121, 121, 121)
+}
+.social-list li a:hover {
+    background: #000;
 }
 .social-icon {
     position: absolute;

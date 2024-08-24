@@ -9,6 +9,7 @@ import { FaHouse } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 import { FaCalendarAlt } from "react-icons/fa";
+import { GrView } from "react-icons/gr";
 import htmlIcon from "./assets/img/html.png";
 import cssIcon from "./assets/img/css.png";
 import jsIcon from "./assets/img/javascript.png";
@@ -292,27 +293,48 @@ function App() {
                       <div className="card-body">
                         <p className="d-flex align-items-center text-secondary">
                           <FaCalendarAlt />
-                          &nbsp;2023
+                          &nbsp;November 2023
                         </p>
-                        <h5 className="card-title">Card title</h5>
+                        <h5 className="card-title">BeijingStore</h5>
                         <p className="card-text">
-                          My first webpages using HTML, CSS and JavaScript.
+                          My first e-commerce webpage using HTML, CSS and
+                          JavaScript.
                         </p>
+                        {/* project tags */}
+                        <div className="d-flex justify-content-start align-items-center">
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            HTML
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            CSS
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            JavaScript
+                          </button>
+                        </div>
+                        {/* repo */}
                         <div className="d-flex justify-content-between align-items-center">
-                          <div className="btn-group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              View
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              Edit
-                            </button>
-                          </div>
+                          <u className="social-list d-flex justify-content-start">
+                            <li>
+                              <a href="#!" className="">
+                                <GrView className="git-repo" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#!" className="">
+                                <TbBrandGithubFilled className="git-repo" />
+                              </a>
+                            </li>
+                          </u>
                           <small className="text-muted">Individual</small>
                         </div>
                       </div>
@@ -329,37 +351,60 @@ function App() {
                         height="225"
                       />
                       <div className="card-body">
-                        <p className="d-flex align-items-center">
+                        <p className="d-flex align-items-center text-secondary">
                           <FaCalendarAlt />
-                          &nbsp;2023
+                          &nbsp;March 2024
                         </p>
-                        <h5 className="card-title">Card title</h5>
+                        <h5 className="card-title">
+                          Decentralized Exchange Platform
+                        </h5>
                         <p className="card-text">
                           This is my first project using ReactJS, where me and
-                          my team developed a simple Decentralized Trading
+                          my team developed a simple Decentralized Exchange
                           Platform leveraging blockchain technology for
-                          peer-to-peer asset transfers. The frontend is hosted
-                          on Vercel, while the backend is built with ExpressJS
-                          on Render. We utilized Ganache as a local blockchain
-                          and Metamask for wallet integration. As this is our
-                          first time working with APIs, the response time may be
-                          slower compared to production websites.
+                          peer-to-peer asset transfers.
                         </p>
+                        {/* project tags */}
+                        <div className="d-flex justify-content-start align-items-center">
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            ReactJS
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            ExpressJS
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            Blockchain
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            PostgreSQL
+                          </button>
+                        </div>
+                        {/* repo */}
                         <div className="d-flex justify-content-between align-items-center">
-                          <div className="btn-group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              View
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              Go to Repository
-                            </button>
-                          </div>
+                          <u className="social-list d-flex justify-content-start">
+                            <li>
+                              <a href="#!" className="">
+                                <GrView className="git-repo" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#!" className="">
+                                <TbBrandGithubFilled className="git-repo" />
+                              </a>
+                            </li>
+                          </u>
                           <small className="text-muted">Team size: 4</small>
                         </div>
                       </div>
@@ -375,31 +420,51 @@ function App() {
                         height="225"
                       />
                       <div className="card-body">
-                        <p className="d-flex align-items-center">
+                        <p className="d-flex align-items-center text-secondary">
                           <FaCalendarAlt />
-                          &nbsp;2023
+                          &nbsp;May 2024
                         </p>
-                        <h5 className="card-title">Card title</h5>
+                        <h5 className="card-title">Weather Dashboard</h5>
                         <p className="card-text">
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
+                          A weather dashboard that allows Swinburne students to
+                          check the weather on their campus. Data is collected
+                          from the weather station itself.
                         </p>
+                        {/* project tags */}
+                        <div className="d-flex justify-content-start align-items-center">
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            ReactJS
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            ExpressJS
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            DynamoDB
+                          </button>
+                        </div>
+                        {/* repo */}
                         <div className="d-flex justify-content-between align-items-center">
-                          <div className="btn-group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              View
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              Edit
-                            </button>
-                          </div>
+                          <u className="social-list d-flex justify-content-start">
+                            <li>
+                              <a href="#!" className="">
+                                <GrView className="git-repo" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#!" className="">
+                                <TbBrandGithubFilled className="git-repo" />
+                              </a>
+                            </li>
+                          </u>
                           <small className="text-muted">Team size: 2</small>
                         </div>
                       </div>
@@ -408,48 +473,47 @@ function App() {
 
                   <div className="col-md-4">
                     <div className="card mb-4 shadow-sm">
-                      <svg
+                      <img
                         className="bd-placeholder-img card-img-top"
+                        src="https://raw.githubusercontent.com/PancakesLmao/SWB-Weather-Dashboard/main/weather%20dashboard.png"
+                        alt="Project 1"
                         width="100%"
                         height="225"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="xMidYMid slice"
-                        focusable="false"
-                        role="img"
-                        aria-label="Placeholder: Thumbnail"
-                      >
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"></rect>
-                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                          Thumbnail
-                        </text>
-                      </svg>
+                      />
                       <div className="card-body">
-                        <p className="card-text">
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
+                        <p className="d-flex align-items-center text-secondary">
+                          <FaCalendarAlt />
+                          &nbsp;May 2024
                         </p>
+                        <h5 className="card-title">Weather Station</h5>
+                        <p className="card-text">
+                          Weather station runs IoT devices to collect data from a weather station
+                        </p>
+                        {/* project tags */}
+                        <div className="d-flex justify-content-start align-items-center">
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            IoT
+                          </button>
+                          
+                        </div>
+                        {/* repo */}
                         <div className="d-flex justify-content-between align-items-center">
-                          <div className="btn-group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              View
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              Edit
-                            </button>
-                          </div>
-                          <small className="text-muted">9 mins</small>
+                          <u className="social-list d-flex justify-content-start">
+                            <li>
+                              <a href="#!" className="">
+                                <TbBrandGithubFilled className="git-repo" />
+                              </a>
+                            </li>
+                          </u>
+                          <small className="text-muted">Team size: 3</small>
                         </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -489,7 +553,7 @@ function App() {
                       </li> */}
                       <li>
                         <a
-                          href="linkedin.com/in/khanh-phuc-thinh-nguyen-a216b928b"
+                          href="https://linkedin.com/in/khanh-phuc-thinh-nguyen-a216b928b"
                           className=""
                         >
                           <FaLinkedinIn className="social-icon" />
@@ -519,13 +583,13 @@ function App() {
                       height: "2px",
                     }}
                   />
-                  <p>
+                  {/* <p>
                     <FaDiscord />
                     &nbsp;
                     <a href="#!" className="text-dark">
                       pancakeslmao2902
                     </a>
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
