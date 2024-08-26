@@ -330,7 +330,10 @@ function App() {
                               </a>
                             </li>
                             <li>
-                              <a href="#!" className="">
+                              <a
+                                href="https://github.com/PancakesLmao/COS10005-Web-development"
+                                className=""
+                              >
                                 <TbBrandGithubFilled className="git-repo" />
                               </a>
                             </li>
@@ -395,12 +398,18 @@ function App() {
                         <div className="d-flex justify-content-between align-items-center">
                           <u className="social-list d-flex justify-content-start">
                             <li>
-                              <a href="#!" className="">
+                              <a
+                                href="https://asiandexmurphy.vercel.app/"
+                                className=""
+                              >
                                 <GrView className="git-repo" />
                               </a>
                             </li>
                             <li>
-                              <a href="#!" className="">
+                              <a
+                                href="https://github.com/asianmurphyCo/Decentralized-Trading-Platform"
+                                className=""
+                              >
                                 <TbBrandGithubFilled className="git-repo" />
                               </a>
                             </li>
@@ -460,7 +469,10 @@ function App() {
                               </a>
                             </li>
                             <li>
-                              <a href="#!" className="">
+                              <a
+                                href="https://github.com/asianmurphyCo/Weather-Dashboard"
+                                className=""
+                              >
                                 <TbBrandGithubFilled className="git-repo" />
                               </a>
                             </li>
@@ -487,7 +499,8 @@ function App() {
                         </p>
                         <h5 className="card-title">Weather Station</h5>
                         <p className="card-text">
-                          Weather station runs IoT devices to collect data from a weather station
+                          Weather station runs IoT devices to collect data from
+                          a weather station
                         </p>
                         {/* project tags */}
                         <div className="d-flex justify-content-start align-items-center">
@@ -497,13 +510,15 @@ function App() {
                           >
                             IoT
                           </button>
-                          
                         </div>
                         {/* repo */}
                         <div className="d-flex justify-content-between align-items-center">
                           <u className="social-list d-flex justify-content-start">
                             <li>
-                              <a href="#!" className="">
+                              <a
+                                href="https://github.com/asianmurphyCo/Weather-Station-Edge"
+                                className=""
+                              >
                                 <TbBrandGithubFilled className="git-repo" />
                               </a>
                             </li>
@@ -513,7 +528,6 @@ function App() {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
