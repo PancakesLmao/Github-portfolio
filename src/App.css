@@ -1,3 +1,10 @@
+body {
+    
+}
+.header-shadow {
+    box-shadow: 3px 5px 20px #cfd8dd;
+    transition: transform 250ms ease, box-shadow 0.3s ease;
+}
 .darker-bg {
     background-color: #f1f3f4;
 }
@@ -45,6 +52,16 @@
 .project-tag {
     border-radius: 50px !important;
     margin: 0px 7px 20px 0px;
+}
+.project-shadow {
+    box-shadow: 3px 3px 20px #cfd8dd;
+    transition: transform 250ms ease, box-shadow 0.5s ease;
+}
+.project-shadow:hover {
+    box-shadow: 3px 3px 20px transparent;
+    transform: translateY(-10px);
+    border: 1px solid #6f6f6f;
+    transition: transform 250ms ease;
 }
 /* git repo */
 .git-repo li a {

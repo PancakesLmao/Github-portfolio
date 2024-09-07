@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import avatar from "./assets/img/avatar.webp";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
@@ -22,11 +22,40 @@ import gitIcon from "./assets/img/git.png";
 import "./App.css";
 
 function App() {
+  // Scroll detection
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const handleScroll = () => {
+      let currentSection = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 50) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="">
         {/* Navbar */}
-        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-body-tertiary">
+        <nav
+          className={`navbar fixed-top navbar-expand-lg navbar-light darker-bg ${
+            activeSection != "introduction" ? "header-shadow" : ""
+          }`}
+        >
           <div className="container">
             <a
               className="navbar-brand"
@@ -54,7 +83,9 @@ function App() {
               <ul className="navbar-nav mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a
-                    className="nav-link"
+                    className={`nav-link ${
+                      activeSection === "introduction" ? "active" : ""
+                    }`}
                     aria-current="page"
                     href="#introduction"
                   >
@@ -62,22 +93,43 @@ function App() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#about">
+                  <a
+                    className={`nav-link ${
+                      activeSection === "about" ? "active" : ""
+                    }`}
+                    href="#about"
+                  >
                     About
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#experience">
+                  <a
+                    className={`nav-link ${
+                      activeSection === "experience" ? "active" : ""
+                    }`}
+                    href="#experience"
+                  >
                     Experience
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#project">
+                  <a
+                    className={`nav-link ${
+                      activeSection === "project" ? "active" : ""
+                    }`}
+                    aria-current="page"
+                    href="#project"
+                  >
                     Projects
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#connect">
+                  <a
+                    className={`nav-link ${
+                      activeSection === "connect" ? "active" : ""
+                    }`}
+                    href="#connect"
+                  >
                     Contact
                   </a>
                 </li>
@@ -102,8 +154,13 @@ function App() {
                   typesetting industry. Lorem Ipsum has been the.
                 </p>
                 {/* Music */}
-                <div className="music-player mb-4 d-flex">
-                  <audio controls autoPlay loop></audio>
+                <div
+                  className="music-player mb-4 d-flex"
+                  style={{ backgroundColor: "#F1F3F4" }}
+                >
+                  <audio controls autoPlay loop>
+                    <source src="#" type="audio/mpeg" />
+                  </audio>
                   <marquee direction="left" className="align-self-center">
                     Jar of Love - WantingsMusic
                   </marquee>
@@ -210,9 +267,9 @@ function App() {
               <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
                 <img className="skillIcon" src={gitIcon} alt="Git" />
               </div>
-              <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
+              {/* <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
                 <img className="skillIcon" src={awsIcon} alt="AWS" />
-              </div>
+              </div> */}
               <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
                 <img className="skillIcon" src={mysqlIcon} alt="MySQL" />
               </div>
@@ -266,7 +323,7 @@ function App() {
               <div className="container">
                 <div className="row">
                   <div className="col-md-4">
-                    <div className="card mb-4 shadow-sm">
+                    <div className="card mb-4 project-shadow">
                       {/* <svg
                         className="bd-placeholder-img card-img-top"
                         width="100%"
@@ -345,10 +402,10 @@ function App() {
                   </div>
 
                   <div className="col-md-4">
-                    <div className="card mb-4 shadow-sm">
+                    <div className="card mb-4 project-shadow">
                       <img
                         className="bd-placeholder-img card-img-top"
-                        src="https://camo.githubusercontent.com/af891c109771ecc3f67433301eb5141124ed8fc9c876905111a15d66776873d4/68747470733a2f2f736e6970626f6172642e696f2f73396f5641772e6a7067"
+                        src="https://camo.githubusercontent.com/cdf91fd6cc98e66c95e3c8e021a04a31ac38febd5bfef55ad2cd5ffac7055839/68747470733a2f2f736e6970626f6172642e696f2f73396f5641772e6a7067"
                         alt="Project 1"
                         width="100%"
                         height="225"
@@ -420,7 +477,7 @@ function App() {
                     </div>
                   </div>
                   <div className="col-md-4">
-                    <div className="card mb-4 shadow-sm">
+                    <div className="card mb-4 project-shadow">
                       <img
                         className="bd-placeholder-img card-img-top"
                         src="https://raw.githubusercontent.com/PancakesLmao/SWB-Weather-Dashboard/main/weather%20dashboard.png"
@@ -484,10 +541,10 @@ function App() {
                   </div>
 
                   <div className="col-md-4">
-                    <div className="card mb-4 shadow-sm">
+                    <div className="card mb-4 project-shadow">
                       <img
                         className="bd-placeholder-img card-img-top"
-                        src="https://raw.githubusercontent.com/PancakesLmao/SWB-Weather-Dashboard/main/weather%20dashboard.png"
+                        src="https://raw.githubusercontent.com/asianmurphyCo/Weather-Station-Edge/main/20240316_134721.jpg"
                         alt="Project 1"
                         width="100%"
                         height="225"
@@ -528,6 +585,64 @@ function App() {
                       </div>
                     </div>
                   </div>
+
+                  <div className="col-md-4">
+                    <div className="card mb-4 project-shadow">
+                      <img
+                        className="bd-placeholder-img card-img-top"
+                        src="https://images.viblo.asia/8258af92-2681-460f-b49a-c22de88288da.png"
+                        alt="Project 1"
+                        width="100%"
+                        height="225"
+                      />
+                      <div className="card-body">
+                        <p className="d-flex align-items-center text-secondary">
+                          <FaCalendarAlt />
+                          &nbsp;May 2024
+                        </p>
+                        <h5 className="card-title">IoT Dashboard</h5>
+                        <p className="card-text">
+                          A platform that allow users to view their
+                          devices&apos; data
+                        </p>
+                        {/* project tags */}
+                        <div className="d-flex justify-content-start align-items-center">
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            NextJS
+                          </button>
+
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-secondary project-tag"
+                          >
+                            MongoDB
+                          </button>
+                        </div>
+                        {/* repo */}
+                        <div className="d-flex justify-content-between align-items-center">
+                          <u className="social-list d-flex justify-content-start">
+                            <li>
+                              <a href="#!" className="">
+                                <GrView className="git-repo" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#!" className="">
+                                <TbBrandGithubFilled className="git-repo" />
+                              </a>
+                            </li>
+                          </u>
+                          <small className="text-muted">Team size: 5</small>
+                        </div>
+                      </div>
+                      <span className="badge text-bg-primary">
+                        Under development
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -537,7 +652,7 @@ function App() {
         <footer
           className="text-center text-lg-start text-dark"
           id="connect"
-          style={{ backgroundColor: "#f8f9fa" }}
+          style={{ backgroundColor: "#F1F3F4" }}
         >
           {/* Social media */}
           <section className="p-2">
@@ -613,7 +728,7 @@ function App() {
                   <hr
                     className="mb-4 mt-0 d-inline-block mx-auto"
                     style={{
-                      width: "120px",
+                      width: "130px",
                       backgroundColor: "#7c4dff",
                       height: "2px",
                     }}
@@ -632,14 +747,14 @@ function App() {
             </div>
           </section>
           <div
-            className="text-center p-3"
+            className="text-center p-3 text-dark"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
             © 2024&nbsp;
             <a className="text-dark" href="#">
               Portfolio Website
             </a>
-            &nbsp;designed by PancakesLmao
+            &nbsp;designed by <strong>PancakesLmao</strong>
           </div>
         </footer>
       </div>
