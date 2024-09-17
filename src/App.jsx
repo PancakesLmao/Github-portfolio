@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import avatar from "./assets/img/avatar.webp";
+import profile from "./assets/img/profile1.png";
+import arrowDown from "./assets/img/arrow-down.png";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
 import { TbBrandGithubFilled } from "react-icons/tb";
@@ -174,20 +176,22 @@ function App() {
                   <div>
                     <button
                       type="button"
-                      className="btn btn-outline-secondary mb-3"
+                      className="btn btn-outline-secondary my-3"
                     >
-                      Download CV
+                      Download Resume
                     </button>
                   </div>
                 </div>
               </div>
-              {/*  */}
-              {/* Button */}
-              {/* <div>
-                <button type="button" className="btn btn-outline-secondary mb-4">
-                  View Portfolio
-                </button>
-              </div> */}
+            </div>
+            <div className="row">
+              <div className="col-12 d-flex justify-content-center">
+                <div className="float-animation opacity-50 py-3">
+                  <a href="#about">
+                    <img src={arrowDown} alt="Arrow down" width={50} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -279,43 +283,95 @@ function App() {
         {/* Timeline */}
         <section className="bsb-timeline-1 py-xl-8" id="experience">
           <div className="container">
-            <h2 className="text-center pb-5 mt-3">Work Experience</h2>
-            <div className="row justify-content-center">
-              <div className="col-10 col-md-8 col-xl-6">
-                <ul className="timeline">
-                  <li className="timeline-item">
-                    <div className="timeline-body">
-                      <div className="timeline-content">
-                        <div className="card border-0">
-                          <div className="card-body p-0">
-                            <h5 className="card-subtitle text-secondary mb-1">
-                              Spring 2024 - Present
-                            </h5>
-                            <h3 className="card-title mb-3">
-                              IT Lab Assistant
-                            </h3>
-                            <p className="card-text m-0">
-                              Recognizing there are still many gaps in my
-                              knowledge, I decided to join the IT Lab as an
-                              assistant to deepen my understanding of web
-                              development. By working on hands-on, real-life
-                              projects I aim to improve my skills and gain
-                              practical experience in the field.
-                            </p>
+            <div className="row">
+              <div className="col-6">
+                <h2 className="text-center pb-5 mt-3">Education</h2>
+                <div className="row justify-content-center">
+                  <div className="col-10 col-md-8 col-xl-6">
+                    <ul className="timeline">
+                      <li className="timeline-item">
+                        <div className="timeline-body">
+                          <div className="timeline-content pb-4">
+                            <div className="card border-0">
+                              <div className="zoom card-body p-3 border border-secondary rounded">
+                                <h6 className="card-subtitle text-secondary mb-1">
+                                  September 2022 - Present
+                                </h6>
+                                <h5 className="card-title mb-2">
+                                  Swinburne University of Technology
+                                </h5>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="row justify-content-center">
+                  <div className="col-10 col-md-8 col-xl-6">
+                    <ul className="timeline">
+                      <li className="timeline-item pb-4">
+                        <div className="timeline-body">
+                          <div className="timeline-content">
+                            <div className="card border-0">
+                              <div className="zoom card-body p-3 border border-secondary rounded">
+                                <h6 className="card-subtitle text-secondary mb-1">
+                                  June 2018 - June 2022
+                                </h6>
+                                <h5 className="card-title mb-2">
+                                  Mac Dinh Chi High School
+                                </h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-6">
+                <h2 className="text-center pb-5 mt-3">Work Experience</h2>
+                <div className="row justify-content-center">
+                  <div className="col-10 col-md-8 col-xl-6">
+                    <ul className="timeline">
+                      <li className="timeline-item">
+                        <div className="timeline-body">
+                          <div className="timeline-content">
+                            <div className="card border-0">
+                              <div className="card-body p-0">
+                                <h5 className="card-subtitle text-secondary mb-1">
+                                  Spring 2024 - Present
+                                </h5>
+                                <h4 className="card-title mb-3">
+                                  IT Lab Assistant
+                                </h4>
+                                <p className="card-text m-0">
+                                  Recognizing there are still many gaps in my
+                                  knowledge, I decided to join the IT Lab as an
+                                  assistant to deepen my understanding of web
+                                  development. By working on hands-on, real-life
+                                  projects I aim to improve my skills and gain
+                                  practical experience in the field.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
         {/* end of Timeline */}
         {/* Projects */}
-        <section className="projects darker-bg" id="project">
-          <div className="container">
+        <section className="projects darker-bg pb-5" id="project">
+          <div className="container pt-3">
             <h2 className="text-center pt-5 pb-2 mt-3">
               Check out my projects
             </h2>
@@ -324,22 +380,6 @@ function App() {
                 <div className="row">
                   <div className="col-md-4">
                     <div className="card mb-4 project-shadow">
-                      {/* <svg
-                        className="bd-placeholder-img card-img-top"
-                        width="100%"
-                        height="225"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="xMidYMid slice"
-                        focusable="false"
-                        role="img"
-                        aria-label="Placeholder: Thumbnail"
-                      >
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"></rect>
-                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                          Thumbnail
-                        </text>
-                      </svg> */}
                       <img
                         className="bd-placeholder-img card-img-top"
                         src="https://raw.githubusercontent.com/PancakesLmao/COS10005-Web-development/main/overview.png"
@@ -624,7 +664,7 @@ function App() {
                         {/* repo */}
                         <div className="d-flex justify-content-between align-items-center">
                           <u className="social-list d-flex justify-content-start">
-                            <li>
+                            <li disabled>
                               <a href="#!" className="">
                                 <GrView className="git-repo" />
                               </a>
@@ -650,7 +690,7 @@ function App() {
         </section>
         {/* Footer */}
         <footer
-          className="text-center text-lg-start text-dark"
+          className="text-center text-lg-start text-dark pt-4"
           id="connect"
           style={{ backgroundColor: "#F1F3F4" }}
         >

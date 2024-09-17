@@ -1,6 +1,7 @@
 body {
     
 }
+
 .header-shadow {
     box-shadow: 3px 5px 20px #cfd8dd;
     transition: transform 250ms ease, box-shadow 0.3s ease;
@@ -14,6 +15,28 @@ body {
 }
 .introduction {
     padding-top: 4rem;
+}
+
+.float-animation {
+    transform: translatey(0px);
+	animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translatey(20px);
+    }
+    15% {
+        transform: translatey(0px);
+    }
+    40% {
+        transform: translatey(20px);
+    }
+    85% {
+        transform: translatey(0px);
+    }
+    100% {
+        transform: translatey(20px);
+    }
 }
 /* music player */
 .music-player {
@@ -44,6 +67,14 @@ body {
 .skillIcon:hover {
     width: 75px;
 }
+/* Timeline zoom */
+.zoom {
+    transition: transform .3s;
+}
+.zoom:hover {
+    transform: scale(1.05);
+}
+
 /* tags */
 .tag {
     border-radius: 40px !important;
