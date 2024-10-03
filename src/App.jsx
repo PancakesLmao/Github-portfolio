@@ -20,6 +20,7 @@ import nodejsIcon from "./assets/img/nodejs.png";
 import awsIcon from "./assets/img/aws.png";
 import mysqlIcon from "./assets/img/mysql.png";
 import gitIcon from "./assets/img/git.png";
+import bgWave from "./assets/img/bg-wave-4a496675.mp4";
 
 import "./App.css";
 
@@ -152,8 +153,9 @@ function App() {
                 <h5>Frontend Developer</h5>
                 <p>Sophomore at Swinburne University of Technology</p>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the.
+                  I love creating creative websites about games and anime. I'm
+                  also interested in IoT programming and exploring ways to
+                  combine these two fields.
                 </p>
                 {/* Music */}
                 <div
@@ -177,6 +179,11 @@ function App() {
                     <button
                       type="button"
                       className="btn btn-outline-secondary my-3"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href =
+                          "https://drive.google.com/file/d/1FgiTWgBTdx5OdVx2tvggmpNDGEjIqobz/view?usp=drive_link";
+                      }}
                     >
                       Download Resume
                     </button>
@@ -202,16 +209,14 @@ function App() {
             <div className="row">
               <div className="col">
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&apos;s
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  I am a beginner in frontend development. I have recently
+                  completed several projects related to my skills, but most were
+                  simple and not comparable to real-world projects. I am seeking
+                  internships to further enhance my programming skills and
+                  advance my journey toward becoming a skilled web developer. I
+                  am excited to gain hands-on experience through real-life
+                  projects and contribute meaningfully to a company's growth and
+                  success.
                 </p>
               </div>
             </div>
@@ -265,9 +270,9 @@ function App() {
                   alt="ReactJS"
                 />
               </div>
-              <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
+              {/* <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
                 <img className="skillIcon" src={nodejsIcon} alt="NodeJS" />
-              </div>
+              </div> */}
               <div className="col-sm d-flex justify-content-center align-items-center skillFrame">
                 <img className="skillIcon" src={gitIcon} alt="Git" />
               </div>
@@ -422,7 +427,10 @@ function App() {
                         <div className="d-flex justify-content-between align-items-center">
                           <u className="social-list d-flex justify-content-start">
                             <li>
-                              <a href="#!" className="">
+                              <a
+                                href="https://pancakeslmao.github.io/COS10005-Web-development/"
+                                className=""
+                              >
                                 <GrView className="git-repo" />
                               </a>
                             </li>
@@ -688,14 +696,104 @@ function App() {
             </div>
           </div>
         </section>
+        {/* Activity slides */}
+        <section className="container my-5">
+          <div className="row">
+            <div className="col-xl-4 col-md-4 col-sm-12 pe-5">
+              <h2 className="pb-2 mt-4">Activities</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+            <div className="col-xl-8 col-md-8 col-sm-12">
+              <div
+                id="carouselExampleFade"
+                className="carousel slide carousel-fade"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img
+                      src="https://scontent.fsgn6-1.fna.fbcdn.net/v/t39.30808-6/436310275_829197402599809_3396840890144712581_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH2VwX4F4rBdUQH5xMUUkjfO8n1NB_xMHA7yfU0H_EwcBMkFI2DiFRBTJZuzGzRExZNX4gNXZfdh8antcbzQblp&_nc_ohc=O8bSkQLfHCsQ7kNvgGXkgKp&_nc_ht=scontent.fsgn6-1.fna&_nc_gid=AD2nzEhjBnjZjYbv1xKLDh5&oh=00_AYD2Y3WT-u7i1Yqm10rPUEMNKY_aq5NSn7WnF6y5sj6IQg&oe=6704AB45"
+                      className="d-block w-100"
+                      style={{
+                        width: "100%",
+                        height: "500px",
+                        objectFit: "cover",
+                      }}
+                      alt="..."
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="https://scontent.fsgn12-1.fna.fbcdn.net/v/t39.30808-6/441925982_829197249266491_1953613101969720193_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHGWZi6mGt1FpCnePnVJ6TLt8CYYaH2BVK3wJhhofYFUpwQjpUbIGgf9Ayu047UpfU9FUANgQ7wPxEtkqTufMFa&_nc_ohc=qmZTrZkRAWoQ7kNvgEabzNw&_nc_ht=scontent.fsgn12-1.fna&_nc_gid=AHhfAP-v-dlHvW3Dbn6EqVh&oh=00_AYBP3Tkxo9WYLB7FiHWVeyJUVM5F3B30q_C37YmQdinXig&oe=670496FB"
+                      className="d-block w-100"
+                      style={{
+                        width: "100%",
+                        height: "500px",
+                        objectFit: "cover",
+                      }}
+                      alt="..."
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="https://scontent.fsgn6-1.fna.fbcdn.net/v/t39.30808-6/440606855_829197129266503_5491288342302695310_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGnshCVBRWXgB9_FmYPdKnlr9jG1tCP0m-v2MbW0I_Sb9Eu7kqW3634AIi1Lz14xHmn-4TYvsVh3_zGpjhkfTq6&_nc_ohc=_yr9FT3Epn8Q7kNvgFtlDQ2&_nc_ht=scontent.fsgn6-1.fna&_nc_gid=ASDxz78-1Ss8Q9-_anRKD-A&oh=00_AYCyOzks87ilNdAAWFRQHLnYzxEvj9Au0ArKPgWilCwn_w&oe=6704991E"
+                      className="d-block w-100"
+                      style={{
+                        width: "100%",
+                        height: "500px",
+                        objectFit: "cover",
+                      }}
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleFade"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleFade"
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Footer */}
+        <div id="section-gradient"></div>
         <footer
           className="text-center text-lg-start text-dark pt-4"
           id="connect"
-          style={{ backgroundColor: "#F1F3F4" }}
+          style={{ backgroundColor: "#F1F3F4", position: "relative" }}
         >
           {/* Social media */}
-          <section className="p-2">
+          <section className="py-5">
             <div className="container text-center text-md-start mt-5">
               <div className="row mt-3">
                 <div className="col-md-4 col-lg-4 col-xl-5 mx-auto mb-4">
@@ -711,7 +809,10 @@ function App() {
                     />
                     <u className="social-list d-flex justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
                       <li>
-                        <a href="#!" className="">
+                        <a
+                          href="https://www.facebook.com/profile.php?id=100015304028967"
+                          className=""
+                        >
                           <FaFacebookF className="social-icon" />
                         </a>
                       </li>
@@ -729,7 +830,7 @@ function App() {
                         </a>
                       </li>
                       <li>
-                        <a href="#!" className="">
+                        <a href="https://github.com/PancakesLmao" className="">
                           <TbBrandGithubFilled className="social-icon" />
                         </a>
                       </li>
@@ -788,7 +889,7 @@ function App() {
           </section>
           <div
             className="text-center p-3 text-dark"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+            style={{ backgroundColor: "transparent" }}
           >
             © 2024&nbsp;
             <a className="text-dark" href="#">
@@ -796,6 +897,24 @@ function App() {
             </a>
             &nbsp;designed by <strong>PancakesLmao</strong>
           </div>
+          <video
+            className="video-bg"
+            style={{
+              width: "100%",
+              height: "25vh",
+              objectFit: "cover",
+              position: "absolute",
+              mixBlendMode: "difference",
+              bottom: 0,
+              left: 0,
+              zIndex: 1,
+            }}
+            autoPlay
+            loop
+            muted
+          >
+            <source src={bgWave} />
+          </video>
         </footer>
       </div>
     </>

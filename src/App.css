@@ -189,6 +189,12 @@ body {
     .bsb-timeline-1 .timeline>.timeline-item .timeline-content{padding-bottom:3rem}}
     .bsb-timeline-1 .timeline>.timeline-item:last-child .timeline-content{padding-bottom:0}
 /* Footer */
+#section-gradient {
+  height: 100px;
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom, white , #F1F3F4 );
+}
+
 .icon {
     border:#000 1px solid;
     border-radius: 50%;
