@@ -289,7 +289,7 @@ function App() {
         <section className="bsb-timeline-1 py-xl-8" id="experience">
           <div className="container">
             <div className="row">
-              <div className="col-6">
+              <div className="col-xl-6 col-md-6 col-sm-12">
                 <h2 className="text-center pb-5 mt-3">Education</h2>
                 <div className="row justify-content-center">
                   <div className="col-10 col-md-8 col-xl-6">
@@ -337,7 +337,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-6">
+              <div className="col-xl-6 col-md-6 col-sm-12">
                 <h2 className="text-center pb-5 mt-3">Work Experience</h2>
                 <div className="row justify-content-center">
                   <div className="col-10 col-md-8 col-xl-6">
@@ -403,7 +403,7 @@ function App() {
                           JavaScript.
                         </p>
                         {/* project tags */}
-                        <div className="d-flex justify-content-start align-items-center">
+                        <div className=" justify-content-start align-items-center">
                           <button
                             type="button"
                             className="btn btn-sm btn-outline-secondary project-tag"
@@ -473,7 +473,7 @@ function App() {
                           peer-to-peer asset transfers.
                         </p>
                         {/* project tags */}
-                        <div className="d-flex justify-content-start align-items-center">
+                        <div className=" justify-content-start align-items-center">
                           <button
                             type="button"
                             className="btn btn-sm btn-outline-secondary project-tag"
@@ -545,7 +545,7 @@ function App() {
                           from the weather station itself.
                         </p>
                         {/* project tags */}
-                        <div className="d-flex justify-content-start align-items-center">
+                        <div className=" justify-content-start align-items-center">
                           <button
                             type="button"
                             className="btn btn-sm btn-outline-secondary project-tag"
@@ -654,7 +654,7 @@ function App() {
                           devices&apos; data
                         </p>
                         {/* project tags */}
-                        <div className="d-flex justify-content-start align-items-center">
+                        <div className=" justify-content-start align-items-center">
                           <button
                             type="button"
                             className="btn btn-sm btn-outline-secondary project-tag"
