@@ -182,7 +182,7 @@ function App() {
                       onClick={(e) => {
                         e.preventDefault();
                         window.location.href =
-                          "https://drive.google.com/file/d/1FgiTWgBTdx5OdVx2tvggmpNDGEjIqobz/view?usp=drive_link";
+                          "https://drive.google.com/file/d/1PwEdtD9s1wSHjLiEMr8U1dtPdJm3fCw8/view?usp=drive_link";
                       }}
                     >
                       Download Resume
